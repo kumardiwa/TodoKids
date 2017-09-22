@@ -143,6 +143,7 @@ class DKGoogleClass {
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
                 let dict : [String : Any]? = json as? Dictionary
+                print(dict)
                 guard let routesArr : [Any] = dict?["routes"] as? Array else{
                     // completion([],"Unable to find root")
                     return
