@@ -81,6 +81,9 @@
 		BEFB611D1F72D37200413F73 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61181F72D37200413F73 /* LeftViewController.xib */; };
 		BEFB611E1F72D37200413F73 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61181F72D37200413F73 /* LeftViewController.xib */; };
 		DFCF2456B9E96915D678B931 /* Pods_TodoKidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F592D87534304BF07C2F2524 /* Pods_TodoKidsTests.framework */; };
+		F313F6741F75105000ADB705 /* GoogleConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313F6731F75105000ADB705 /* GoogleConstant.swift */; };
+		F313F6751F75105000ADB705 /* GoogleConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313F6731F75105000ADB705 /* GoogleConstant.swift */; };
+		F313F6761F75105000ADB705 /* GoogleConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F313F6731F75105000ADB705 /* GoogleConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,7 @@
 		BEFB61181F72D37200413F73 /* LeftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
 		D1C1CDCEF3FA22C1F5EE566E /* Pods-TodoKidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E33AA81E834341CE96A75E55 /* Pods-TodoKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F313F6731F75105000ADB705 /* GoogleConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConstant.swift; sourceTree = "<group>"; };
 		F592D87534304BF07C2F2524 /* Pods_TodoKidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoKidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				BE612CE01F741E2700925825 /* ColorExtension.swift */,
+				F313F6731F75105000ADB705 /* GoogleConstant.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -630,6 +635,7 @@
 				BEFB60B71F72CE7700413F73 /* ViewController.swift in Sources */,
 				BEFB60BD1F72CE7700413F73 /* TodoKids.xcdatamodeld in Sources */,
 				BEFB60E91F72D22D00413F73 /* SignUpViewController.swift in Sources */,
+				F313F6741F75105000ADB705 /* GoogleConstant.swift in Sources */,
 				BE612CD51F7415E300925825 /* CreateEventViewController.swift in Sources */,
 				BEFB61111F72D2F000413F73 /* HistoryViewController.swift in Sources */,
 				BEFB61011F72D2A400413F73 /* AbautViewController.swift in Sources */,
@@ -653,6 +659,7 @@
 				BEFB60F21F72D27000413F73 /* HomeViewController.swift in Sources */,
 				BE612CD61F7415E300925825 /* CreateEventViewController.swift in Sources */,
 				BE612CE21F741E2700925825 /* ColorExtension.swift in Sources */,
+				F313F6751F75105000ADB705 /* GoogleConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +679,7 @@
 				BEFB60F31F72D27000413F73 /* HomeViewController.swift in Sources */,
 				BE612CD71F7415E300925825 /* CreateEventViewController.swift in Sources */,
 				BE612CE31F741E2700925825 /* ColorExtension.swift in Sources */,
+				F313F6761F75105000ADB705 /* GoogleConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
