@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15AB27C5FDB593B27720E06D /* Pods_TodoKids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1519D7FA5C1CD935AD7F6A9D /* Pods_TodoKids.framework */; };
+		2132AF28C0C78EDEE80C1B1D /* Pods_TodoKidsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401CF07CDB3464BAFDFE1522 /* Pods_TodoKidsUITests.framework */; };
+		BE612CD51F7415E300925825 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CD31F7415E300925825 /* CreateEventViewController.swift */; };
+		BE612CD61F7415E300925825 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CD31F7415E300925825 /* CreateEventViewController.swift */; };
+		BE612CD71F7415E300925825 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CD31F7415E300925825 /* CreateEventViewController.swift */; };
+		BE612CD81F7415E300925825 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CD41F7415E300925825 /* CreateEventViewController.xib */; };
+		BE612CD91F7415E300925825 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CD41F7415E300925825 /* CreateEventViewController.xib */; };
+		BE612CDA1F7415E300925825 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CD41F7415E300925825 /* CreateEventViewController.xib */; };
+		BE612CE11F741E2700925825 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE01F741E2700925825 /* ColorExtension.swift */; };
+		BE612CE21F741E2700925825 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE01F741E2700925825 /* ColorExtension.swift */; };
+		BE612CE31F741E2700925825 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE01F741E2700925825 /* ColorExtension.swift */; };
+		BE612CE61F743F6800925825 /* PlayGroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE41F743F6800925825 /* PlayGroundsViewController.swift */; };
+		BE612CE71F743F6800925825 /* PlayGroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE41F743F6800925825 /* PlayGroundsViewController.swift */; };
+		BE612CE81F743F6800925825 /* PlayGroundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CE41F743F6800925825 /* PlayGroundsViewController.swift */; };
+		BE612CE91F743F6800925825 /* PlayGroundsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */; };
+		BE612CEA1F743F6800925825 /* PlayGroundsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */; };
+		BE612CEB1F743F6800925825 /* PlayGroundsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */; };
+		BE612CEF1F74436800925825 /* PlayGroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CED1F74436800925825 /* PlayGroundCell.swift */; };
+		BE612CF01F74436800925825 /* PlayGroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CED1F74436800925825 /* PlayGroundCell.swift */; };
+		BE612CF11F74436800925825 /* PlayGroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE612CED1F74436800925825 /* PlayGroundCell.swift */; };
+		BE612CF21F74436800925825 /* PlayGroundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CEE1F74436800925825 /* PlayGroundCell.xib */; };
+		BE612CF31F74436800925825 /* PlayGroundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CEE1F74436800925825 /* PlayGroundCell.xib */; };
+		BE612CF41F74436800925825 /* PlayGroundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE612CEE1F74436800925825 /* PlayGroundCell.xib */; };
 		BEFB60B51F72CE7700413F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60B41F72CE7700413F73 /* AppDelegate.swift */; };
 		BEFB60B71F72CE7700413F73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60B61F72CE7700413F73 /* ViewController.swift */; };
 		BEFB60BA1F72CE7700413F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60B81F72CE7700413F73 /* Main.storyboard */; };
@@ -15,6 +38,49 @@
 		BEFB60C21F72CE7700413F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60C01F72CE7700413F73 /* LaunchScreen.storyboard */; };
 		BEFB60CD1F72CE7800413F73 /* TodoKidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60CC1F72CE7800413F73 /* TodoKidsTests.swift */; };
 		BEFB60D81F72CE7800413F73 /* TodoKidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60D71F72CE7800413F73 /* TodoKidsUITests.swift */; };
+		BEFB60E91F72D22D00413F73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60E71F72D22D00413F73 /* SignUpViewController.swift */; };
+		BEFB60EA1F72D22D00413F73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60E71F72D22D00413F73 /* SignUpViewController.swift */; };
+		BEFB60EB1F72D22D00413F73 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60E71F72D22D00413F73 /* SignUpViewController.swift */; };
+		BEFB60EC1F72D22D00413F73 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60E81F72D22D00413F73 /* SignUpViewController.xib */; };
+		BEFB60ED1F72D22D00413F73 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60E81F72D22D00413F73 /* SignUpViewController.xib */; };
+		BEFB60EE1F72D22D00413F73 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60E81F72D22D00413F73 /* SignUpViewController.xib */; };
+		BEFB60F11F72D27000413F73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60EF1F72D27000413F73 /* HomeViewController.swift */; };
+		BEFB60F21F72D27000413F73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60EF1F72D27000413F73 /* HomeViewController.swift */; };
+		BEFB60F31F72D27000413F73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60EF1F72D27000413F73 /* HomeViewController.swift */; };
+		BEFB60F41F72D27000413F73 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F01F72D27000413F73 /* HomeViewController.xib */; };
+		BEFB60F51F72D27000413F73 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F01F72D27000413F73 /* HomeViewController.xib */; };
+		BEFB60F61F72D27000413F73 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F01F72D27000413F73 /* HomeViewController.xib */; };
+		BEFB60F91F72D28100413F73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60F71F72D28100413F73 /* SearchViewController.swift */; };
+		BEFB60FA1F72D28100413F73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60F71F72D28100413F73 /* SearchViewController.swift */; };
+		BEFB60FB1F72D28100413F73 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60F71F72D28100413F73 /* SearchViewController.swift */; };
+		BEFB60FC1F72D28100413F73 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F81F72D28100413F73 /* SearchViewController.xib */; };
+		BEFB60FD1F72D28100413F73 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F81F72D28100413F73 /* SearchViewController.xib */; };
+		BEFB60FE1F72D28100413F73 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB60F81F72D28100413F73 /* SearchViewController.xib */; };
+		BEFB61011F72D2A400413F73 /* AbautViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */; };
+		BEFB61021F72D2A400413F73 /* AbautViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */; };
+		BEFB61031F72D2A400413F73 /* AbautViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */; };
+		BEFB61041F72D2A400413F73 /* AbautViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61001F72D2A400413F73 /* AbautViewController.xib */; };
+		BEFB61051F72D2A400413F73 /* AbautViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61001F72D2A400413F73 /* AbautViewController.xib */; };
+		BEFB61061F72D2A400413F73 /* AbautViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61001F72D2A400413F73 /* AbautViewController.xib */; };
+		BEFB61091F72D2C300413F73 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61071F72D2C300413F73 /* FavouritesViewController.swift */; };
+		BEFB610A1F72D2C300413F73 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61071F72D2C300413F73 /* FavouritesViewController.swift */; };
+		BEFB610B1F72D2C300413F73 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61071F72D2C300413F73 /* FavouritesViewController.swift */; };
+		BEFB610C1F72D2C300413F73 /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61081F72D2C300413F73 /* FavouritesViewController.xib */; };
+		BEFB610D1F72D2C300413F73 /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61081F72D2C300413F73 /* FavouritesViewController.xib */; };
+		BEFB610E1F72D2C300413F73 /* FavouritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61081F72D2C300413F73 /* FavouritesViewController.xib */; };
+		BEFB61111F72D2F000413F73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB610F1F72D2F000413F73 /* HistoryViewController.swift */; };
+		BEFB61121F72D2F000413F73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB610F1F72D2F000413F73 /* HistoryViewController.swift */; };
+		BEFB61131F72D2F000413F73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB610F1F72D2F000413F73 /* HistoryViewController.swift */; };
+		BEFB61141F72D2F000413F73 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61101F72D2F000413F73 /* HistoryViewController.xib */; };
+		BEFB61151F72D2F000413F73 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61101F72D2F000413F73 /* HistoryViewController.xib */; };
+		BEFB61161F72D2F000413F73 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61101F72D2F000413F73 /* HistoryViewController.xib */; };
+		BEFB61191F72D37200413F73 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61171F72D37200413F73 /* LeftViewController.swift */; };
+		BEFB611A1F72D37200413F73 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61171F72D37200413F73 /* LeftViewController.swift */; };
+		BEFB611B1F72D37200413F73 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB61171F72D37200413F73 /* LeftViewController.swift */; };
+		BEFB611C1F72D37200413F73 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61181F72D37200413F73 /* LeftViewController.xib */; };
+		BEFB611D1F72D37200413F73 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61181F72D37200413F73 /* LeftViewController.xib */; };
+		BEFB611E1F72D37200413F73 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEFB61181F72D37200413F73 /* LeftViewController.xib */; };
+		DFCF2456B9E96915D678B931 /* Pods_TodoKidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F592D87534304BF07C2F2524 /* Pods_TodoKidsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +101,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C67C2E86BF287ACD7665426 /* Pods-TodoKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKids/Pods-TodoKids.debug.xcconfig"; sourceTree = "<group>"; };
+		1519D7FA5C1CD935AD7F6A9D /* Pods_TodoKids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoKids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		401CF07CDB3464BAFDFE1522 /* Pods_TodoKidsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoKidsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1A0034139A8103440E8884 /* Pods-TodoKidsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsUITests/Pods-TodoKidsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		93E76F9F139B9AA4F57304C1 /* Pods-TodoKids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKids.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKids/Pods-TodoKids.release.xcconfig"; sourceTree = "<group>"; };
+		BBE9C53BEEC34AFC2A7B4C20 /* Pods-TodoKidsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsUITests/Pods-TodoKidsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE612CD31F7415E300925825 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		BE612CD41F7415E300925825 /* CreateEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateEventViewController.xib; sourceTree = "<group>"; };
+		BE612CE01F741E2700925825 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BE612CE41F743F6800925825 /* PlayGroundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGroundsViewController.swift; sourceTree = "<group>"; };
+		BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGroundsViewController.xib; sourceTree = "<group>"; };
+		BE612CED1F74436800925825 /* PlayGroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGroundCell.swift; sourceTree = "<group>"; };
+		BE612CEE1F74436800925825 /* PlayGroundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGroundCell.xib; sourceTree = "<group>"; };
 		BEFB60B11F72CE7700413F73 /* TodoKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB60B41F72CE7700413F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEFB60B61F72CE7700413F73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +128,23 @@
 		BEFB60D31F72CE7800413F73 /* TodoKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB60D71F72CE7800413F73 /* TodoKidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoKidsUITests.swift; sourceTree = "<group>"; };
 		BEFB60D91F72CE7800413F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFB60E71F72D22D00413F73 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BEFB60E81F72D22D00413F73 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		BEFB60EF1F72D27000413F73 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BEFB60F01F72D27000413F73 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BEFB60F71F72D28100413F73 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BEFB60F81F72D28100413F73 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbautViewController.swift; sourceTree = "<group>"; };
+		BEFB61001F72D2A400413F73 /* AbautViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AbautViewController.xib; sourceTree = "<group>"; };
+		BEFB61071F72D2C300413F73 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		BEFB61081F72D2C300413F73 /* FavouritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouritesViewController.xib; sourceTree = "<group>"; };
+		BEFB610F1F72D2F000413F73 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		BEFB61101F72D2F000413F73 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		BEFB61171F72D37200413F73 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		BEFB61181F72D37200413F73 /* LeftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		D1C1CDCEF3FA22C1F5EE566E /* Pods-TodoKidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E33AA81E834341CE96A75E55 /* Pods-TodoKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoKidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		F592D87534304BF07C2F2524 /* Pods_TodoKidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoKidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15AB27C5FDB593B27720E06D /* Pods_TodoKids.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCF2456B9E96915D678B931 /* Pods_TodoKidsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +168,53 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2132AF28C0C78EDEE80C1B1D /* Pods_TodoKidsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39EE5F33B0309691ABF33D4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C67C2E86BF287ACD7665426 /* Pods-TodoKids.debug.xcconfig */,
+				93E76F9F139B9AA4F57304C1 /* Pods-TodoKids.release.xcconfig */,
+				D1C1CDCEF3FA22C1F5EE566E /* Pods-TodoKidsTests.debug.xcconfig */,
+				E33AA81E834341CE96A75E55 /* Pods-TodoKidsTests.release.xcconfig */,
+				8E1A0034139A8103440E8884 /* Pods-TodoKidsUITests.debug.xcconfig */,
+				BBE9C53BEEC34AFC2A7B4C20 /* Pods-TodoKidsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA01E7025C26B9EFE25C37D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1519D7FA5C1CD935AD7F6A9D /* Pods_TodoKids.framework */,
+				F592D87534304BF07C2F2524 /* Pods_TodoKidsTests.framework */,
+				401CF07CDB3464BAFDFE1522 /* Pods_TodoKidsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE612CDB1F741DB900925825 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				BE612CE01F741E2700925825 /* ColorExtension.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		BE612CEC1F74433F00925825 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BE612CED1F74436800925825 /* PlayGroundCell.swift */,
+				BE612CEE1F74436800925825 /* PlayGroundCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		BEFB60A81F72CE7700413F73 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +222,8 @@
 				BEFB60CB1F72CE7800413F73 /* TodoKidsTests */,
 				BEFB60D61F72CE7800413F73 /* TodoKidsUITests */,
 				BEFB60B21F72CE7700413F73 /* Products */,
+				39EE5F33B0309691ABF33D4F /* Pods */,
+				BA01E7025C26B9EFE25C37D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +240,9 @@
 		BEFB60B31F72CE7700413F73 /* TodoKids */ = {
 			isa = PBXGroup;
 			children = (
+				BE612CEC1F74433F00925825 /* TableViewCell */,
+				BE612CDB1F741DB900925825 /* lib */,
+				BEFB60E61F72D1F500413F73 /* Controller */,
 				BEFB60B41F72CE7700413F73 /* AppDelegate.swift */,
 				BEFB60B61F72CE7700413F73 /* ViewController.swift */,
 				BEFB60B81F72CE7700413F73 /* Main.storyboard */,
@@ -128,6 +272,31 @@
 			path = TodoKidsUITests;
 			sourceTree = "<group>";
 		};
+		BEFB60E61F72D1F500413F73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB60E71F72D22D00413F73 /* SignUpViewController.swift */,
+				BEFB60E81F72D22D00413F73 /* SignUpViewController.xib */,
+				BEFB60EF1F72D27000413F73 /* HomeViewController.swift */,
+				BEFB60F01F72D27000413F73 /* HomeViewController.xib */,
+				BE612CE41F743F6800925825 /* PlayGroundsViewController.swift */,
+				BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */,
+				BEFB60F71F72D28100413F73 /* SearchViewController.swift */,
+				BEFB60F81F72D28100413F73 /* SearchViewController.xib */,
+				BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */,
+				BEFB61001F72D2A400413F73 /* AbautViewController.xib */,
+				BEFB61071F72D2C300413F73 /* FavouritesViewController.swift */,
+				BEFB61081F72D2C300413F73 /* FavouritesViewController.xib */,
+				BEFB610F1F72D2F000413F73 /* HistoryViewController.swift */,
+				BEFB61101F72D2F000413F73 /* HistoryViewController.xib */,
+				BEFB61171F72D37200413F73 /* LeftViewController.swift */,
+				BEFB61181F72D37200413F73 /* LeftViewController.xib */,
+				BE612CD31F7415E300925825 /* CreateEventViewController.swift */,
+				BE612CD41F7415E300925825 /* CreateEventViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEFB60DC1F72CE7800413F73 /* Build configuration list for PBXNativeTarget "TodoKids" */;
 			buildPhases = (
+				81F1798ACCC5775971392A60 /* [CP] Check Pods Manifest.lock */,
 				BEFB60AD1F72CE7700413F73 /* Sources */,
 				BEFB60AE1F72CE7700413F73 /* Frameworks */,
 				BEFB60AF1F72CE7700413F73 /* Resources */,
+				397A1593CD4809C4356E622A /* [CP] Embed Pods Frameworks */,
+				67653891F76F094B60A459AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +324,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEFB60DF1F72CE7800413F73 /* Build configuration list for PBXNativeTarget "TodoKidsTests" */;
 			buildPhases = (
+				E96185E69A5DE9CCE59B7AFA /* [CP] Check Pods Manifest.lock */,
 				BEFB60C41F72CE7700413F73 /* Sources */,
 				BEFB60C51F72CE7700413F73 /* Frameworks */,
 				BEFB60C61F72CE7700413F73 /* Resources */,
+				FA0ACA252A8F64BB8D326B52 /* [CP] Embed Pods Frameworks */,
+				0780C6BE9D174C10C1887A95 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEFB60E21F72CE7800413F73 /* Build configuration list for PBXNativeTarget "TodoKidsUITests" */;
 			buildPhases = (
+				5B0F1CD4F5BB05446661771F /* [CP] Check Pods Manifest.lock */,
 				BEFB60CF1F72CE7800413F73 /* Sources */,
 				BEFB60D01F72CE7800413F73 /* Frameworks */,
 				BEFB60D11F72CE7800413F73 /* Resources */,
+				10DD7318627989CA0589710C /* [CP] Embed Pods Frameworks */,
+				D6853418FE88C59D5BCDDE5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +415,16 @@
 			files = (
 				BEFB60C21F72CE7700413F73 /* LaunchScreen.storyboard in Resources */,
 				BEFB60BF1F72CE7700413F73 /* Assets.xcassets in Resources */,
+				BEFB60FC1F72D28100413F73 /* SearchViewController.xib in Resources */,
+				BEFB60F41F72D27000413F73 /* HomeViewController.xib in Resources */,
+				BE612CD81F7415E300925825 /* CreateEventViewController.xib in Resources */,
+				BEFB610C1F72D2C300413F73 /* FavouritesViewController.xib in Resources */,
+				BEFB61141F72D2F000413F73 /* HistoryViewController.xib in Resources */,
+				BEFB60EC1F72D22D00413F73 /* SignUpViewController.xib in Resources */,
+				BEFB611C1F72D37200413F73 /* LeftViewController.xib in Resources */,
+				BE612CF21F74436800925825 /* PlayGroundCell.xib in Resources */,
+				BE612CE91F743F6800925825 /* PlayGroundsViewController.xib in Resources */,
+				BEFB61041F72D2A400413F73 /* AbautViewController.xib in Resources */,
 				BEFB60BA1F72CE7700413F73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +433,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE612CEA1F743F6800925825 /* PlayGroundsViewController.xib in Resources */,
+				BEFB61051F72D2A400413F73 /* AbautViewController.xib in Resources */,
+				BEFB611D1F72D37200413F73 /* LeftViewController.xib in Resources */,
+				BEFB610D1F72D2C300413F73 /* FavouritesViewController.xib in Resources */,
+				BE612CD91F7415E300925825 /* CreateEventViewController.xib in Resources */,
+				BEFB60ED1F72D22D00413F73 /* SignUpViewController.xib in Resources */,
+				BE612CF31F74436800925825 /* PlayGroundCell.xib in Resources */,
+				BEFB60F51F72D27000413F73 /* HomeViewController.xib in Resources */,
+				BEFB60FD1F72D28100413F73 /* SearchViewController.xib in Resources */,
+				BEFB61151F72D2F000413F73 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,18 +450,189 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE612CEB1F743F6800925825 /* PlayGroundsViewController.xib in Resources */,
+				BEFB61061F72D2A400413F73 /* AbautViewController.xib in Resources */,
+				BEFB611E1F72D37200413F73 /* LeftViewController.xib in Resources */,
+				BEFB610E1F72D2C300413F73 /* FavouritesViewController.xib in Resources */,
+				BE612CDA1F7415E300925825 /* CreateEventViewController.xib in Resources */,
+				BEFB60EE1F72D22D00413F73 /* SignUpViewController.xib in Resources */,
+				BE612CF41F74436800925825 /* PlayGroundCell.xib in Resources */,
+				BEFB60F61F72D27000413F73 /* HomeViewController.xib in Resources */,
+				BEFB60FE1F72D28100413F73 /* SearchViewController.xib in Resources */,
+				BEFB61161F72D2F000413F73 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0780C6BE9D174C10C1887A95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		10DD7318627989CA0589710C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKidsUITests/Pods-TodoKidsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		397A1593CD4809C4356E622A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TodoKids/Pods-TodoKids-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKids/Pods-TodoKids-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B0F1CD4F5BB05446661771F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoKidsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67653891F76F094B60A459AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKids/Pods-TodoKids-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81F1798ACCC5775971392A60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoKids-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6853418FE88C59D5BCDDE5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKidsUITests/Pods-TodoKidsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E96185E69A5DE9CCE59B7AFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoKidsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA0ACA252A8F64BB8D326B52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoKidsTests/Pods-TodoKidsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BEFB60AD1F72CE7700413F73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB61091F72D2C300413F73 /* FavouritesViewController.swift in Sources */,
+				BEFB60F91F72D28100413F73 /* SearchViewController.swift in Sources */,
+				BEFB60F11F72D27000413F73 /* HomeViewController.swift in Sources */,
+				BE612CE11F741E2700925825 /* ColorExtension.swift in Sources */,
+				BE612CE61F743F6800925825 /* PlayGroundsViewController.swift in Sources */,
+				BEFB61191F72D37200413F73 /* LeftViewController.swift in Sources */,
+				BE612CEF1F74436800925825 /* PlayGroundCell.swift in Sources */,
 				BEFB60B71F72CE7700413F73 /* ViewController.swift in Sources */,
 				BEFB60BD1F72CE7700413F73 /* TodoKids.xcdatamodeld in Sources */,
+				BEFB60E91F72D22D00413F73 /* SignUpViewController.swift in Sources */,
+				BE612CD51F7415E300925825 /* CreateEventViewController.swift in Sources */,
+				BEFB61111F72D2F000413F73 /* HistoryViewController.swift in Sources */,
+				BEFB61011F72D2A400413F73 /* AbautViewController.swift in Sources */,
 				BEFB60B51F72CE7700413F73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +641,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE612CF01F74436800925825 /* PlayGroundCell.swift in Sources */,
+				BEFB610A1F72D2C300413F73 /* FavouritesViewController.swift in Sources */,
+				BE612CE71F743F6800925825 /* PlayGroundsViewController.swift in Sources */,
+				BEFB60EA1F72D22D00413F73 /* SignUpViewController.swift in Sources */,
+				BEFB61021F72D2A400413F73 /* AbautViewController.swift in Sources */,
 				BEFB60CD1F72CE7800413F73 /* TodoKidsTests.swift in Sources */,
+				BEFB60FA1F72D28100413F73 /* SearchViewController.swift in Sources */,
+				BEFB611A1F72D37200413F73 /* LeftViewController.swift in Sources */,
+				BEFB61121F72D2F000413F73 /* HistoryViewController.swift in Sources */,
+				BEFB60F21F72D27000413F73 /* HomeViewController.swift in Sources */,
+				BE612CD61F7415E300925825 /* CreateEventViewController.swift in Sources */,
+				BE612CE21F741E2700925825 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +660,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE612CF11F74436800925825 /* PlayGroundCell.swift in Sources */,
+				BEFB610B1F72D2C300413F73 /* FavouritesViewController.swift in Sources */,
+				BE612CE81F743F6800925825 /* PlayGroundsViewController.swift in Sources */,
+				BEFB60EB1F72D22D00413F73 /* SignUpViewController.swift in Sources */,
+				BEFB61031F72D2A400413F73 /* AbautViewController.swift in Sources */,
 				BEFB60D81F72CE7800413F73 /* TodoKidsUITests.swift in Sources */,
+				BEFB60FB1F72D28100413F73 /* SearchViewController.swift in Sources */,
+				BEFB611B1F72D37200413F73 /* LeftViewController.swift in Sources */,
+				BEFB61131F72D2F000413F73 /* HistoryViewController.swift in Sources */,
+				BEFB60F31F72D27000413F73 /* HomeViewController.swift in Sources */,
+				BE612CD71F7415E300925825 /* CreateEventViewController.swift in Sources */,
+				BE612CE31F741E2700925825 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +819,11 @@
 		};
 		BEFB60DD1F72CE7800413F73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C67C2E86BF287ACD7665426 /* Pods-TodoKids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E5ZE8Z8DF;
 				INFOPLIST_FILE = TodoKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smart.TodoKids;
@@ -442,9 +835,11 @@
 		};
 		BEFB60DE1F72CE7800413F73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E76F9F139B9AA4F57304C1 /* Pods-TodoKids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E5ZE8Z8DF;
 				INFOPLIST_FILE = TodoKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smart.TodoKids;
@@ -456,6 +851,7 @@
 		};
 		BEFB60E01F72CE7800413F73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C1CDCEF3FA22C1F5EE566E /* Pods-TodoKidsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +868,7 @@
 		};
 		BEFB60E11F72CE7800413F73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33AA81E834341CE96A75E55 /* Pods-TodoKidsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +885,7 @@
 		};
 		BEFB60E31F72CE7800413F73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1A0034139A8103440E8884 /* Pods-TodoKidsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +901,7 @@
 		};
 		BEFB60E41F72CE7800413F73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBE9C53BEEC34AFC2A7B4C20 /* Pods-TodoKidsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
