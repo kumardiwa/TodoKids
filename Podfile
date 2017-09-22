@@ -3,6 +3,11 @@
 
 target 'TodoKids' do
     pod 'Cosmos', :git => 'https://github.com/evgenyneu/Cosmos.git', :branch => 'swift-4.0'
+    pod 'GooglePlaces'
+    pod 'GoogleMaps'
+    pod 'GooglePlacePicker'
+    pod 'Alamofire', '~> 4.5'
+
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 

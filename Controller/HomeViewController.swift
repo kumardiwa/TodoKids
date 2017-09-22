@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        DKGoogleClass.shared.getNearByPlaces(nil)
         setupLayouts()
         // Do any additional setup after loading the view.
     }

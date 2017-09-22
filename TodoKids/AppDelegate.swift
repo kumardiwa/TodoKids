@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import GooglePlaces
+import GoogleMapsCore
+import GooglePlacePicker
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        addGoogleAPI()
         setupSliderMenu()
         return true
     }
@@ -51,6 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
+    }
+    func addGoogleAPI(){
+        GMSPlacesClient.provideAPIKey(GoogleKeys.apiKey.rawValue)
+        GMSServices.provideAPIKey(GoogleKeys.apiKey.rawValue)
     }
 
     // MARK: - Core Data stack
