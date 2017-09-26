@@ -57,8 +57,15 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func setupLayouts(){
         self.logoutView.layer.cornerRadius = 6
         self.createEventView.layer.cornerRadius = 6
+        setupCreateEventView()
     }
-    
+    func setupCreateEventView(){
+        let touch = UITapGestureRecognizer(target: self, action: #selector(createEventViewTouched))
+        touch.numberOfTapsRequired = 1;
+        touch.numberOfTouchesRequired = 1
+        createEventView.addGestureRecognizer(touch)
+        createEventView.isUserInteractionEnabled = true
+    }
     func setupViewcontrollers(){
         let homeVC = HomeViewController()
         self.homeViewcontroller = UINavigationController(rootViewController: homeVC)
@@ -118,6 +125,12 @@ class LeftViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         case .share:
             print("Share")
             //self.slideMenuController()?.changeMainViewController(self.shareViewController, close: true)
+        }
+    }
+    
+    @objc func createEventViewTouched(){
+        self.showAlert(title: "Pending", message: "API and design is pending", firstButtonTitle: "OK", secondButtonTitle: nil) { (btnIndex) in
+            //
         }
     }
 

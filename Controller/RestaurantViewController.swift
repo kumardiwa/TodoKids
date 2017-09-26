@@ -59,23 +59,20 @@ class RestaurantViewController: UIViewController,UITableViewDelegate,UITableView
     
     // MARK: - Location
     func getPlaces(){
-        self.checkLocationStatus { (isApproved) in
-            if(isApproved == true){
-                if LocationTracker.shared.isLocationAvailable == false{
+        if LocationTracker.shared.isLocationAvailable == false{
+            self.checkLocationStatus(completion: { (isApproved) in
+                if isApproved == true{
                     SVProgressHUD.show(withStatus: "Fetching Location")
                     LocationTracker.shared.delegate = self
                     LocationTracker.shared.startUpdatingLocation()
                 }
-                else{
-                    self.getRestaurents()
-                }
-            }
-            else{
-                
-            }
+            })
         }
+        else{
+            self.getRestaurents()
+        }
+        
     }
-    
     func didUpdateLocation(_location: CLLocation) {
         if placeRequested == false {
             self.getRestaurents()

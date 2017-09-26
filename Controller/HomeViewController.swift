@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GooglePlaces
+
 class HomeViewController: UIViewController {
     
     // MARK: - Outlets
@@ -59,8 +61,14 @@ class HomeViewController: UIViewController {
         
     }
     @IBAction func locationButtonAction(_ sender: Any) {
-        let myLocationVC  = MyLocationViewController(nibName: "MyLocationViewController", bundle: nil)
-        navigationController?.pushViewController(myLocationVC, animated: true)
+        
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+    
+
+//        let myLocationVC  = MyLocationViewController(nibName: "MyLocationViewController", bundle: nil)
+//        navigationController?.pushViewController(myLocationVC, animated: true)
     }
     @objc func playgroundsViewTapped(){
         let playGroundVC = PlayGroundsViewController(nibName: "PlayGroundsViewController", bundle: nil)
@@ -71,12 +79,82 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(restaurantVC, animated: true)
     }
     @objc func eventsViewtapped(){
-        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
-        navigationController?.pushViewController(createEventVC, animated: true)
+        showEventAlertController()
     }
     @objc func attractionViewTapped(){
-//        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
-//        navigationController?.pushViewController(createEventVC, animated: true)
+        showAttractionAlertController()
+    }
+    
+    // MARK: - Action Controller
+    func showEventAlertController()
+    {
+        let actionSheetController: UIAlertController = UIAlertController(title: "Select Events", message: nil, preferredStyle: .actionSheet)
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { void in
+            print("Cancel")
+        }
+        let directionActionButton: UIAlertAction = UIAlertAction(title: "Museum Exhibitions", style: .default)
+        { void in
+            //            let navigationVC = NavViewController(source: LocationTracker.shared.coordinate!, destination: (self.selectedPlace?.coordinate)!)
+            //            self.navigationController?.pushViewController(navigationVC, animated: true)
+        }
+        let detailsActionButton: UIAlertAction = UIAlertAction(title: "Theatre & Art Eventa", style: .default)
+        { void in
+            //self.editSharedUser()
+        }
+        let showWebSiteActionButton: UIAlertAction = UIAlertAction(title: "Art Gallery", style: .default)
+        { void in
+            //self.setSpeedLimitAction()
+        }
+        actionSheetController.addAction(directionActionButton)
+        actionSheetController.addAction(detailsActionButton)
+        actionSheetController.addAction(showWebSiteActionButton)
+        actionSheetController.addAction(cancelActionButton)
+        //actionSheetController.addAction(favouriteActionButton)
+        actionSheetController.view.tintColor = UIColor.navigationBarColor
+        self.present(actionSheetController, animated: true, completion: nil)
+        //let popPresenter = actionSheetController.popoverPresentationController
+        
+    }
+    // MARK: - Action Controller
+    func showAttractionAlertController()
+    {
+        let actionSheetController: UIAlertController = UIAlertController(title: "Select Attractions", message: nil, preferredStyle: .actionSheet)
+        
+        let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { void in
+            print("Cancel")
+        }
+        let directionActionButton: UIAlertAction = UIAlertAction(title: "Aquarium", style: .default)
+        { void in
+            //            let navigationVC = NavViewController(source: LocationTracker.shared.coordinate!, destination: (self.selectedPlace?.coordinate)!)
+            //            self.navigationController?.pushViewController(navigationVC, animated: true)
+        }
+        let detailsActionButton: UIAlertAction = UIAlertAction(title: "Zoo", style: .default)
+        { void in
+            //self.editSharedUser()
+        }
+        let showWebSiteActionButton: UIAlertAction = UIAlertAction(title: "Church", style: .default)
+        { void in
+            //self.setSpeedLimitAction()
+        }
+        let favouriteActionButton: UIAlertAction = UIAlertAction(title: "City Hall", style: .default)
+        { void in
+            //self.setSpeedLimitAction()
+        }
+        let libraryActionButton: UIAlertAction = UIAlertAction(title: "Library", style: .default)
+        { void in
+            //self.setSpeedLimitAction()
+        }
+        actionSheetController.addAction(directionActionButton)
+        actionSheetController.addAction(detailsActionButton)
+        actionSheetController.addAction(showWebSiteActionButton)
+        actionSheetController.addAction(cancelActionButton)
+        actionSheetController.addAction(favouriteActionButton)
+        actionSheetController.addAction(libraryActionButton)
+        actionSheetController.view.tintColor = UIColor.navigationBarColor
+        self.present(actionSheetController, animated: true, completion: nil)
+        //let popPresenter = actionSheetController.popoverPresentationController
+        
     }
     // MARK: - Memory
     override func didReceiveMemoryWarning() {
@@ -132,3 +210,37 @@ extension HomeViewController : SlideMenuControllerDelegate {
     
 }
 
+extension HomeViewController: GMSAutocompleteViewControllerDelegate {
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: \(place.name)")
+        DKGoogleClass.shared.getCoordinateFromPlaceId(place.placeID) { (coordinate, error) in
+            if error == nil{
+                LocationTracker.shared.latitude = coordinate.latitude
+                LocationTracker.shared.longitude = coordinate.longitude
+            }
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+}

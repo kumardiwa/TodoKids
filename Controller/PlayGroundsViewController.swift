@@ -55,20 +55,18 @@ class PlayGroundsViewController: UIViewController,UITableViewDelegate,UITableVie
     
     // MARK: - Location
     func getPlaces(){
-        self.checkLocationStatus { (isApproved) in
-            if(isApproved == true){
-                if LocationTracker.shared.isLocationAvailable == false{
+        if LocationTracker.shared.isLocationAvailable == false{
+            self.checkLocationStatus(completion: { (isApproved) in
+                if isApproved == true{
                     SVProgressHUD.show(withStatus: "Fetching Location")
                     LocationTracker.shared.delegate = self
                     LocationTracker.shared.startUpdatingLocation()
                 }
-                else{
-                    self.getPark()
-                }
-            }
-            else{
-                
-            }
+            })
+        }
+        else{
+            self.getPark()
+            // Yuggler
         }
     }
     

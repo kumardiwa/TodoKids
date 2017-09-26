@@ -65,6 +65,12 @@
 		BE7826FB1F7ABF2E0046B278 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7826F51F7ABF2E0046B278 /* SplashViewController.xib */; };
 		BE7826FD1F7AC2920046B278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60B41F72CE7700413F73 /* AppDelegate.swift */; };
 		BE7826FE1F7AC2930046B278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFB60B41F72CE7700413F73 /* AppDelegate.swift */; };
+		BE7827011F7ACE260046B278 /* EventViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7826FF1F7ACE260046B278 /* EventViewViewController.swift */; };
+		BE7827021F7ACE260046B278 /* EventViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7826FF1F7ACE260046B278 /* EventViewViewController.swift */; };
+		BE7827031F7ACE260046B278 /* EventViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7826FF1F7ACE260046B278 /* EventViewViewController.swift */; };
+		BE7827041F7ACE260046B278 /* EventViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7827001F7ACE260046B278 /* EventViewViewController.xib */; };
+		BE7827051F7ACE260046B278 /* EventViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7827001F7ACE260046B278 /* EventViewViewController.xib */; };
+		BE7827061F7ACE260046B278 /* EventViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7827001F7ACE260046B278 /* EventViewViewController.xib */; };
 		BEDECFB21F7576FD0068077B /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDECFB01F7576FD0068077B /* RestaurantViewController.swift */; };
 		BEDECFB31F7576FD0068077B /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDECFB01F7576FD0068077B /* RestaurantViewController.swift */; };
 		BEDECFB41F7576FD0068077B /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDECFB01F7576FD0068077B /* RestaurantViewController.swift */; };
@@ -199,6 +205,8 @@
 		BE612CEE1F74436800925825 /* PlayGroundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGroundCell.xib; sourceTree = "<group>"; };
 		BE7826F41F7ABF2E0046B278 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BE7826F51F7ABF2E0046B278 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		BE7826FF1F7ACE260046B278 /* EventViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewViewController.swift; sourceTree = "<group>"; };
+		BE7827001F7ACE260046B278 /* EventViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventViewViewController.xib; sourceTree = "<group>"; };
 		BEDECFB01F7576FD0068077B /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		BEDECFB11F7576FD0068077B /* RestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantViewController.xib; sourceTree = "<group>"; };
 		BEDECFB81F7584780068077B /* LocationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
@@ -397,6 +405,8 @@
 				BE612CE51F743F6800925825 /* PlayGroundsViewController.xib */,
 				BEDECFB01F7576FD0068077B /* RestaurantViewController.swift */,
 				BEDECFB11F7576FD0068077B /* RestaurantViewController.xib */,
+				BE7826FF1F7ACE260046B278 /* EventViewViewController.swift */,
+				BE7827001F7ACE260046B278 /* EventViewViewController.xib */,
 				BEFB60F71F72D28100413F73 /* SearchViewController.swift */,
 				BEFB60F81F72D28100413F73 /* SearchViewController.xib */,
 				BEFB60FF1F72D2A400413F73 /* AbautViewController.swift */,
@@ -505,7 +515,7 @@
 				TargetAttributes = {
 					BEFB60B01F72CE7700413F73 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					BEFB60C71F72CE7700413F73 = {
 						CreatedOnToolsVersion = 9.0;
@@ -548,6 +558,7 @@
 				BEFB60BF1F72CE7700413F73 /* Assets.xcassets in Resources */,
 				BEFB60FC1F72D28100413F73 /* SearchViewController.xib in Resources */,
 				BE7826F91F7ABF2E0046B278 /* SplashViewController.xib in Resources */,
+				BE7827041F7ACE260046B278 /* EventViewViewController.xib in Resources */,
 				BEFB60F41F72D27000413F73 /* HomeViewController.xib in Resources */,
 				BE612CD81F7415E300925825 /* CreateEventViewController.xib in Resources */,
 				BEFB610C1F72D2C300413F73 /* FavouritesViewController.xib in Resources */,
@@ -587,6 +598,7 @@
 				BE7826FA1F7ABF2E0046B278 /* SplashViewController.xib in Resources */,
 				F31D3C4D1F76671E00077793 /* NavViewController.xib in Resources */,
 				BEFB60FD1F72D28100413F73 /* SearchViewController.xib in Resources */,
+				BE7827051F7ACE260046B278 /* EventViewViewController.xib in Resources */,
 				BEFB61151F72D2F000413F73 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +623,7 @@
 				BE7826FB1F7ABF2E0046B278 /* SplashViewController.xib in Resources */,
 				F31D3C4E1F76671E00077793 /* NavViewController.xib in Resources */,
 				BEFB60FE1F72D28100413F73 /* SearchViewController.xib in Resources */,
+				BE7827061F7ACE260046B278 /* EventViewViewController.xib in Resources */,
 				BEFB61161F72D2F000413F73 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +806,7 @@
 				BE535B101F782D7100781157 /* ExSlideMenuController.swift in Sources */,
 				BE7826F61F7ABF2E0046B278 /* SplashViewController.swift in Sources */,
 				BE42886E1F782687009896FB /* DesigningConstant.swift in Sources */,
+				BE7827011F7ACE260046B278 /* EventViewViewController.swift in Sources */,
 				BE612CE11F741E2700925825 /* ColorExtension.swift in Sources */,
 				BE612CE61F743F6800925825 /* PlayGroundsViewController.swift in Sources */,
 				BEFB61191F72D37200413F73 /* LeftViewController.swift in Sources */,
@@ -845,6 +859,7 @@
 				BE4288651F7820BF009896FB /* MyLocationMapHelper.swift in Sources */,
 				BE612CE21F741E2700925825 /* ColorExtension.swift in Sources */,
 				F313F6751F75105000ADB705 /* GoogleConstant.swift in Sources */,
+				BE7827021F7ACE260046B278 /* EventViewViewController.swift in Sources */,
 				BE1DA1921F79678000F217AC /* ShareViewController.swift in Sources */,
 				BE535B0B1F782CE300781157 /* SlideMenuController.swift in Sources */,
 				BEDECFBA1F7584780068077B /* LocationTracker.swift in Sources */,
@@ -881,6 +896,7 @@
 				BE4288661F7820BF009896FB /* MyLocationMapHelper.swift in Sources */,
 				BE612CE31F741E2700925825 /* ColorExtension.swift in Sources */,
 				F313F6761F75105000ADB705 /* GoogleConstant.swift in Sources */,
+				BE7827031F7ACE260046B278 /* EventViewViewController.swift in Sources */,
 				BE1DA1931F79678000F217AC /* ShareViewController.swift in Sources */,
 				BE535B0C1F782CE500781157 /* SlideMenuController.swift in Sources */,
 				BEDECFBB1F7584780068077B /* LocationTracker.swift in Sources */,
@@ -1034,16 +1050,16 @@
 			baseConfigurationReference = 0C67C2E86BF287ACD7665426 /* Pods-TodoKids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6E5ZE8Z8DF;
 				INFOPLIST_FILE = TodoKids/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smart.TodoKids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b6f6bcb7-1873-4a13-970b-5b061f083162";
+				PROVISIONING_PROFILE_SPECIFIER = TodoKidsAdhok;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1054,16 +1070,16 @@
 			baseConfigurationReference = 93E76F9F139B9AA4F57304C1 /* Pods-TodoKids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 6E5ZE8Z8DF;
 				INFOPLIST_FILE = TodoKids/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smart.TodoKids;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b6f6bcb7-1873-4a13-970b-5b061f083162";
+				PROVISIONING_PROFILE_SPECIFIER = TodoKidsAdhok;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
