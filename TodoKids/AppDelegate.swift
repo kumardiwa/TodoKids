@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 import GooglePlaces
-import GoogleMapsCore
-import GooglePlacePicker
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         addGoogleAPI()
+        setupNavigationBar()
         setupSliderMenu()
         return true
     }
@@ -50,15 +50,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSliderMenu(){
-        let mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+       /* let mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: mainViewController)
-        
         self.window?.rootViewController = nav
-        self.window?.makeKeyAndVisible()
+        self.window?.makeKeyAndVisible()*/
+        
+        let mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let leftViewController = LeftViewController()
+
+
+        let rightViewController = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+
+        let slideMenuController = ExSlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+
+        //slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        slideMenuController.delegate = mainViewController
+
+        window?.rootViewController = slideMenuController
     }
     func addGoogleAPI(){
         GMSPlacesClient.provideAPIKey(GoogleKeys.apiKey.rawValue)
         GMSServices.provideAPIKey(GoogleKeys.apiKey.rawValue)
+    }
+    func setupNavigationBar()
+    {
+        UIApplication.shared.statusBarStyle = .lightContent
+        let navBackgroundImage:UIImage! = #imageLiteral(resourceName: "navbar-iphone") //UIImage(named:"navbar-iphone.png")
+        UINavigationBar.appearance().setBackgroundImage(navBackgroundImage, for: .default)
+        UITableViewCell.appearance().preservesSuperviewLayoutMargins = true
+        UITableViewCell.appearance().contentView.preservesSuperviewLayoutMargins = true
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
 
     // MARK: - Core Data stack

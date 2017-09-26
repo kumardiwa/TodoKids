@@ -20,16 +20,23 @@ class HomeViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        DKGoogleClass.shared.getNearByPlaces(nil)
+        self.checkLocationStatus { (isApproved) in
+            LocationTracker.shared.startUpdatingLocation()
+        }
         setupLayouts()
         // Do any additional setup after loading the view.
     }
     
     // MARK: - Setup Layouts
+    func setupNavigationItem(){
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_menu_black_24dp"), style: .plain, target: self, action: #selector(menuButtonTouched))
+    }
     func setupLayouts(){
         self.title = "Category"
         setupLocationButton()
         setupCategoryViews()
+        //setupNavigationItem()
+        setNavigationBarItem()
     }
     func setupLocationButton(){
         btnLocation.layer.cornerRadius = 6.0
@@ -48,17 +55,20 @@ class HomeViewController: UIViewController {
     }
 
     // MARK: - Actions&Methods
+    @objc func menuButtonTouched(){
+        
+    }
     @IBAction func locationButtonAction(_ sender: Any) {
-        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
-        navigationController?.pushViewController(createEventVC, animated: true)
+        let myLocationVC  = MyLocationViewController(nibName: "MyLocationViewController", bundle: nil)
+        navigationController?.pushViewController(myLocationVC, animated: true)
     }
     @objc func playgroundsViewTapped(){
         let playGroundVC = PlayGroundsViewController(nibName: "PlayGroundsViewController", bundle: nil)
         navigationController?.pushViewController(playGroundVC, animated: true)
     }
     @objc func restaurentViewTapped(){
-        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
-        navigationController?.pushViewController(createEventVC, animated: true)
+        let restaurantVC = RestaurantViewController(nibName: "RestaurantViewController", bundle: nil)
+        navigationController?.pushViewController(restaurantVC, animated: true)
     }
     @objc func eventsViewtapped(){
         let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
@@ -86,3 +96,39 @@ class HomeViewController: UIViewController {
     */
     
 }
+extension HomeViewController : SlideMenuControllerDelegate {
+    
+    func leftWillOpen() {
+        print("SlideMenuControllerDelegate: leftWillOpen")
+    }
+    
+    func leftDidOpen() {
+        print("SlideMenuControllerDelegate: leftDidOpen")
+    }
+    
+    func leftWillClose() {
+        print("SlideMenuControllerDelegate: leftWillClose")
+    }
+    
+    func leftDidClose() {
+        print("SlideMenuControllerDelegate: leftDidClose")
+    }
+    
+    func rightWillOpen() {
+        print("SlideMenuControllerDelegate: rightWillOpen")
+    }
+    
+    func rightDidOpen() {
+        print("SlideMenuControllerDelegate: rightDidOpen")
+    }
+    
+    func rightWillClose() {
+        print("SlideMenuControllerDelegate: rightWillClose")
+    }
+    
+    func rightDidClose() {
+        print("SlideMenuControllerDelegate: rightDidClose")
+    }
+    
+}
+

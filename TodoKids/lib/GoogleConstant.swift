@@ -8,18 +8,142 @@
 
 import Foundation
 import GooglePlaces
+import GoogleMaps
 import CoreLocation
-import GooglePlacePicker
 import Alamofire
 enum GoogleKeys : String {
     case apiKey = "AIzaSyAYnrr5b5riPxnRZlwCyQtkFRNL5j6BZSk"
+    
     case serverKey = "AIzaSyDEqXnX27t8p70vjxZWlPbaix5L-v0XxYs"
+}
+enum DKPlaceType : String {
+    case atm = "atm"
+    case bakery = "bakery"
+    case bank = "bank"
+    case bar = "bar"
+    case cafe = "cafe"
+    case casino = "casino"
+    case food = "food"
+    case meal_delivery = "meal_delivery"
+    case meal_takeaway = "meal_takeaway"
+    case night_club = "night_club"
+    case park = "park"
+    case restaurant = "restaurant"
 }
 struct DKGooglePlace {
     var title : String?
     var subtitle : String?
     var placeId : String?
     var fullAddress : String?
+}
+class DKNearbyPlace {
+    var coordinate : CLLocationCoordinate2D?{
+        get{
+            return CLLocationCoordinate2D(latitude: latitude ?? 0.00, longitude: longitude ?? 0.00)
+        }
+    }
+    var id : String?
+    var name : String?
+    var iconUrl : URL?
+    var place_id : String?
+    var isOpen : Bool?
+    var reference : String?
+    var vicinity : String?
+    var photoHeight : Float?
+    var photoWidth : Float?
+    var photo_reference : String?
+    var latitude : CLLocationDegrees?
+    var longitude : CLLocationDegrees?
+    var image : UIImage?
+    var imageMetaData : GMSPlacePhotoMetadata?
+    var rating : Float = 0.0
+    var type : DKPlaceType?
+    
+    
+    func loadFirstPhoto(completion : @escaping (_ photo : UIImage? , _ errorStr : String? ) -> Void) {
+        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: self.place_id!) { (photos, error) -> Void in
+            if let error = error {
+                // TODO: handle the error.
+                print("Error: \(error.localizedDescription)")
+                completion(nil, error.localizedDescription)
+            } else {
+                if let firstPhoto = photos?.results.first {
+                    self.imageMetaData = firstPhoto
+                    self.loadImageForMetadata(photoMetadata: firstPhoto, completion: { (photo, errorStr) in
+                       completion(photo,errorStr)
+                    })
+                }
+                else{
+                    completion(nil, "Unable to find metadeta")
+                }
+            }
+        }
+    }
+    
+    func loadImageForMetadata(photoMetadata: GMSPlacePhotoMetadata , completion : @escaping (_ photo : UIImage?, _ errorStr : String? ) -> Void) {
+        GMSPlacesClient.shared().loadPlacePhoto(photoMetadata, callback: {
+            (photo, error) -> Void in
+            if let error = error {
+                // TODO: handle the error.
+                print("Error: \(error.localizedDescription)")
+                completion(nil,error.localizedDescription)
+            } else {
+                self.image = photo
+                completion(photo,nil)
+                //self.imageView.image = photo;
+              //  self.attributionTextView.attributedText = photoMetadata.attributions;
+            }
+        })
+    }
+    func loadPhoto(completion : @escaping (_ photo : UIImage?, _ errorStr : String?) -> Void){
+        self.loadFirstPhoto { (photo, errorStr) in
+            completion(photo,errorStr)
+        }
+    }
+    
+    func updatePlaceDetails(){
+        let placesClient : GMSPlacesClient = GMSPlacesClient()
+        placesClient.lookUpPlaceID(self.place_id!, callback: { (place, error) -> Void in
+            if let error = error {
+                print("lookup place id query error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let place = place else {
+                print("No place details for")
+                return
+            }
+            self.rating = place.rating
+            //print("Place name \(place.name)")
+            //print("Place address \(place.formattedAddress)")
+           // print("Place placeID \(place.placeID)")
+           // print("Place attributions \(place.attributions)")
+        })
+    }
+    
+    func getDetails(){
+        let placesClient : GMSPlacesClient = GMSPlacesClient()
+        placesClient.lookUpPlaceID(self.place_id!, callback: { (place, error) -> Void in
+            if let error = error {
+                print("lookup place id query error: \(error.localizedDescription)")
+               // completion(CLLocationCoordinate2D(latitude: 0.00, longitude: 0.00),error.localizedDescription)
+                return
+            }
+            
+            guard let place = place else {
+                print("No place details for")
+                //completion(CLLocationCoordinate2D(latitude: 0.00, longitude: 0.00),"No place details for this place")
+                return
+            }
+            let coordinate : CLLocationCoordinate2D? = place.coordinate
+            if coordinate == nil{
+               // completion(CLLocationCoordinate2D(latitude: 0.00, longitude: 0.00),"No coordinate details for this place")
+                return
+            }
+            //completion(coordinate!,nil)
+        })
+    }
+    
 }
 class DKGoogleClass {
     class var shared: DKGoogleClass {
@@ -132,9 +256,9 @@ class DKGoogleClass {
             
         }
     }
-    func getNearByPlaces(_ coordinate : CLLocationCoordinate2D?){
-        
-        let urlStr = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=28.6516,77.1582&radius=5000&type=clubs&keyword=cruise&key=\(GoogleKeys.serverKey.rawValue)"
+    func getNearByPlaces(_ coordinate : CLLocationCoordinate2D? , type : DKPlaceType, completion: @escaping(_ places : [DKNearbyPlace], _ errorStr : String?)-> Void ){
+       //rankby=distance
+        let urlStr = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(LocationTracker.shared.latitude!),\(LocationTracker.shared.longitude!)&rankby=distance&type=\(type.rawValue)&key=\(GoogleKeys.serverKey.rawValue)"
         Alamofire.request(urlStr).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
@@ -143,16 +267,15 @@ class DKGoogleClass {
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
                 let dict : [String : Any]? = json as? Dictionary
-                print(dict)
-                guard let routesArr : [Any] = dict?["routes"] as? Array else{
-                    // completion([],"Unable to find root")
+                guard let results : [[String : Any]] = dict?["results"] as? Array else{
+                     completion([],"Unable to find Places")
                     return
                 }
-                print(routesArr)
-                //completion(routesArr,nil)
+                let places = self.nearByPlaces(results, type: type)
+                completion(places,nil)
             }
             else{
-                // completion([],"Unable to find root")
+                 completion([],"Unable to find Places")
             }
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -160,4 +283,54 @@ class DKGoogleClass {
             }
         }
     }
+    func getRestaurents(){
+        
+    }
+    func nearByPlaces(_ results : [[String : Any]], type : DKPlaceType) -> [DKNearbyPlace]{
+        var places : [DKNearbyPlace] = []
+        for result in results {
+            let geometry : [String : Any]? = result["geometry"] as? Dictionary
+            let location : [String :Any]? = geometry?["location"] as? Dictionary
+            let opening_hours : [String : Any]? = result["opening_hours"] as? Dictionary
+            let photos : [Any]? = result["photos"] as? Array
+            let photoDict : [String : Any]? = photos?.first as? Dictionary
+            
+            let latitude : CLLocationDegrees? = location?["lat"] as? CLLocationDegrees
+            let longitude : CLLocationDegrees? = location?["lng"] as? CLLocationDegrees
+            let name : String? = result["name"] as? String
+            let id : String? = result["id"] as? String
+            let icon : String? = result["icon"] as? String
+            let placeId : String? = result["place_id"] as? String
+            let reference : String? = result["reference"] as? String
+            let vicinity : String? = result["vicinity"] as? String
+            let isOpen : Bool? = opening_hours?["open_now"] as? Bool
+            let photoHeight : Float? = photoDict?["height"] as? Float
+            let photoWidth : Float? = photoDict?["width"] as? Float
+            let photoReference : String? = photoDict?["photo_reference"] as? String
+            
+            let place = DKNearbyPlace()
+            place.latitude = latitude
+            place.longitude = longitude
+            place.name = name
+            place.id = id
+            place.iconUrl = URL(string: icon ?? "")
+            place.place_id = placeId
+            place.reference = reference
+            place.vicinity = vicinity
+            place.isOpen = isOpen
+            place.photoHeight = photoHeight
+            place.photoWidth = photoWidth
+            place.photo_reference = photoReference
+            place.type = type
+            place.updatePlaceDetails()
+//            place.loadFirstPhoto(completion: { (photo, errorStr) in
+//                //
+//            })
+            places.append(place)
+
+        }
+        return places
+    }
+    
+
 }

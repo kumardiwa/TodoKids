@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 extension UIColor{
-    class var textFieldBackgroundColor : UIColor{
-        return self.init(red: 194/255, green: 223/255, blue: 162/255, alpha: 1.0)
+    class var navigationBarColor : UIColor{
+        //return self.init(red: 194/255, green: 223/255, blue: 162/255, alpha: 1.0)
+        return UIColor().colorFromRGB(0x0091C7)
     }
+    
     func colorFromRGB(_ rgbValue : Int) -> UIColor{
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
