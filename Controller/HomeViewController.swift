@@ -75,8 +75,8 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(createEventVC, animated: true)
     }
     @objc func attractionViewTapped(){
-        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
-        navigationController?.pushViewController(createEventVC, animated: true)
+//        let createEventVC = CreateEventViewController(nibName: "CreateEventViewController", bundle: nil)
+//        navigationController?.pushViewController(createEventVC, animated: true)
     }
     // MARK: - Memory
     override func didReceiveMemoryWarning() {

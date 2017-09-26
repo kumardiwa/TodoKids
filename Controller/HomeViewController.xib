@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -141,7 +142,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nli-tR-reW">
                                     <rect key="frame" x="19" y="71" width="150" height="136.5"/>
                                     <subviews>
-                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restorent" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-AA-y0v">
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="events" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-AA-y0v">
                                             <rect key="frame" x="25" y="0.0" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="KZG-mu-23x"/>
@@ -179,7 +180,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLG-RO-ysN">
                                     <rect key="frame" x="18.5" y="71" width="150" height="136.5"/>
                                     <subviews>
-                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playground" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-ha-tcG">
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attaractions" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-ha-tcG">
                                             <rect key="frame" x="25" y="0.0" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="a8P-pY-Whp"/>
@@ -248,6 +249,8 @@
         </view>
     </objects>
     <resources>
+        <image name="attaractions" width="256" height="256"/>
+        <image name="events" width="256" height="256"/>
         <image name="playground" width="256" height="256"/>
         <image name="restorent" width="256" height="256"/>
     </resources>

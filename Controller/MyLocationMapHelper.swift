@@ -43,11 +43,11 @@ extension MyLocationViewController: UITableViewDelegate,UITableViewDataSource,UI
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         self.showTableView()
         let str = (searchBar.text ?? ""  + text)
-        //self.placeAutocomplete(str)
+        self.placeAutocomplete(str)
         return true
     }
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        return false
+        return true
     }
     
     //MARK: - TableViewDelegate/DataSource

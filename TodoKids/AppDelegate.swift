@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        sleep(1)
         addGoogleAPI()
-        setupNavigationBar()
-        setupSliderMenu()
+        gotoSplashScreen()
         return true
     }
 
@@ -48,12 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    class func getAppDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     
     func setupSliderMenu(){
        /* let mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: mainViewController)
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()*/
+        self.window?.rootViewController = nil
+        self.window?.makeKeyAndVisible()
+        setupNavigationBar()
         
         let mainViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let leftViewController = LeftViewController()
@@ -70,11 +76,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = slideMenuController
     }
     func addGoogleAPI(){
+    
         GMSPlacesClient.provideAPIKey(GoogleKeys.apiKey.rawValue)
         GMSServices.provideAPIKey(GoogleKeys.apiKey.rawValue)
     }
     func setupNavigationBar()
     {
+        UIApplication.shared.isStatusBarHidden = false
         UIApplication.shared.statusBarStyle = .lightContent
         let navBackgroundImage:UIImage! = #imageLiteral(resourceName: "navbar-iphone") //UIImage(named:"navbar-iphone.png")
         UINavigationBar.appearance().setBackgroundImage(navBackgroundImage, for: .default)
@@ -82,6 +90,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableViewCell.appearance().contentView.preservesSuperviewLayoutMargins = true
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+    }
+    func gotoSplashScreen(){
+        let splashVC = SplashViewController(nibName: "SplashViewController", bundle: nil)
+        self.window?.rootViewController = splashVC
     }
 
     // MARK: - Core Data stack
